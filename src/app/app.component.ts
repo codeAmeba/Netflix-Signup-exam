@@ -15,9 +15,12 @@ import { Component } from '@angular/core';
     `
       :host {
         position: relative;
-        width: 100vw;
         display: block;
         height: 100vh;
+      }
+      nav {
+        position: absolute;
+        top: 0;
       }
       a {
         margin: 0 30px;
