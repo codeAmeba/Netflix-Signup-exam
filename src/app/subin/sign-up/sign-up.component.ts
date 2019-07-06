@@ -33,6 +33,14 @@ export class SignUpComponent implements OnInit {
     this.pwHolderUp = false;
   }
 
+  emailFocus(value: string) {
+    this.emailHolderUp = value ? true : false;
+  }
+
+  pwFocus(value: string) {
+    this.pwHolderUp = value ? true : false;
+  }
+
   get email() {
     return this.signupForm.get('email');
   }
