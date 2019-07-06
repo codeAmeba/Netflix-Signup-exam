@@ -1,0 +1,43 @@
+<app-signup-header></app-signup-header>
+<div class="message">
+  <div class="content">
+    <span>첫 한 달 동안 마음껏 <strong>무료로 이용하세요. </strong></span>
+  </div>
+</div>
+<div class="simpleContainer">
+  <div class="centerContainer">
+    <form [formGroup]="signupForm">
+      <div class="steps">
+        <span class="step"><b>2</b>/<b>3단계</b></span>
+        <h1 class="step-title">지금 가입하고 한 달 동안 무료로 이용하세요.</h1>
+      </div>
+      <div class="poromo">
+        <span>Netflix 가입, 복잡하지 않아요!</span>
+        <span>복잡한 단계는 모두 없앴습니다.</span>
+      </div>
+      <div class="form-title">계정을 등록하세요.</div>
+      <ul class="sign-up-form">
+        <li class="field-email-wrapper">
+          <input type="text" name="email" id="email" class="textField" formControlName="email"
+            (focus)="emailHolder = !emailHolder">
+          <label for="email" class="placeLabel">이메일</label>
+          <div *ngIf="email.errors?.required && email.touched" class="error-message">이메일 주소를 입력해 주세요.</div>
+          <div *ngIf="(email.errors?.minlength || email.errors?.maxlength) && email.touched" class="error-message">이메일
+            주소는 5 ~ 50자 사이여야 합니다.</div>
+        </li>
+        <li class="field-pw-wrapper">
+          <input type="password" name="password" id="password" class="textField" formControlName="password">
+          <label for="password" class="placeLabel">비밀번호</label>
+          <div *ngIf="password.errors?.required && password.touched" class="error-message">비밀번호를 입력해 주세요.</div>
+          <div *ngIf="(password.errors?.minlength || password.errors?.maxlength )&& password.touched"
+            class="error-message">비밀번호는 4~60자 사이여야 합니다.</div>
+        </li>
+        <li class="field-wrapper">
+          <input type="checkbox" name="check" id="check">
+          <label for="check">예, Netflix 특별 프로모션 알림 이메일을 보내주세요.</label>
+        </li>
+      </ul>
+    </form>
+  </div>
+</div>
+<app-signup-footer></app-signup-footer>
