@@ -11,6 +11,8 @@ import { SignupHeaderComponent } from './subin/signup-header/signup-header.compo
 import { SignUpComponent } from './subin/sign-up/sign-up.component';
 import { SignInComponent } from './subin/sign-in/sign-in.component';
 import { SignupFooterComponent } from './subin/signup-footer/signup-footer.component';
+import { LoginHeaderComponent } from './subin/login-header/login-header.component';
+import { LoginFooterComponent } from './subin/login-footer/login-footer.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { SignupFooterComponent } from './subin/signup-footer/signup-footer.compo
     SignUpComponent,
     SignInComponent,
     SignupFooterComponent,
+    LoginHeaderComponent,
+    LoginFooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
