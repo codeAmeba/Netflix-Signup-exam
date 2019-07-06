@@ -2,18 +2,11 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-subin',
-  template: `
-    <p>
-      subin works!
-    </p>
-  `,
-  styles: []
+  templateUrl: './subin.template.html',
+  styleUrls: ['./subin.style.css'],
 })
 export class SubinComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
