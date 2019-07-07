@@ -2,12 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-hyunjin',
-  template: `
-    <p>
-      hyunjin works!
-    </p>
-  `,
-  styles: []
+  templateUrl: './hyunjin.template.html',
+  styleUrls: ['./hyunjin.style.css'],
 })
 export class HyunjinComponent implements OnInit {
 
