@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-sooyoung',
@@ -19,14 +20,18 @@ import { Component, OnInit } from '@angular/core';
     <p>Netflix 가입, 복잡하지 않아요!</p>
     <p>복잡한 단계는 모두 없앴습니다.</p>
   </div>
-    <form class="sign-up-form">
-      <input class="email" type="text" placeholder="이메일">
-      <input class="password" type="text" placeholder="비밀번호">
+    <form [formGroup]="userForm" class="sign-up-form">
+      <input formControlName="userid" class="email" type="text" placeholder="이메일">
+      <span *ngIf="userid.errors?.required && userid.touched">이메일을 입력하세요.</span>
+      <span *ngIf="userid.errors?.pattern && userid.touched">이메일 형식에 맞게 입력해주세요.</span>
+      <input formControlName="password" class="password" type="text" placeholder="비밀번호">
+      <span *ngIf="password.errors?.required && password.touched">비밀번호를 입력하세요.</span>
+      <span *ngIf="password.errors?.pattern && password.touched">비밀번호를 형식에 맞게 입력해주세요.</span>
       <div class="accept-check">
         <input type="checkbox">
         <p>예, Netflix 특별 프로모션 알림 이메일을 보내주세요.</p>
-      </div>     
-      <button class="next">다음</button>
+      </div>
+      <button type="submit" class="next">다음</button>
     </form>
   </section>
   <footer>
@@ -64,7 +69,7 @@ import { Component, OnInit } from '@angular/core';
     margin: 15px auto;
     padding-left: 10px;
     font-size: 14px;
-    color: #E6E6E6;
+    color: black;
   }
   .email:focus, .password:focus {
     background-color: #E8F0FE;
@@ -146,7 +151,30 @@ export class SooyoungComponent implements OnInit {
 
   constructor() { }
 
+  userForm: FormGroup;
+
   ngOnInit() {
+    this.userForm = new FormGroup({
+      userid: new FormControl('', [
+        Validators.required,
+        Validators.minLength(5),
+        Validators.maxLength(50),
+        Validators.pattern('^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$'),
+      ]),
+      password: new FormControl('', [
+        Validators.required,
+        Validators.minLength(4),
+        Validators.maxLength(60)
+      ])
+    });
+    console.log(this.userForm);
+  }
+
+  get userid() {
+    return this.userForm.get('userid');
+  }
+  get password() {
+    return this.userForm.get('password');
   }
 
 }
