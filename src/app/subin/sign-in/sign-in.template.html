@@ -14,7 +14,7 @@
           <div class="email-container">
             <div class="input-container" [class.error]="email.invalid && email.touched">
               <input type="text" class="textField" id="login-email" name="email" formControlName="email"
-                (focusin)="emailHolderUp = true" (focusout)="emailFocus($event.target.value)">
+                (focusin)="emailHolderUp = true" (blur)="emailFocus($event.target.value)">
               <label for="login-email" class="placeLabel" [class.up]="emailHolderUp">이메일 주소</label>
             </div>
             <div
@@ -24,7 +24,7 @@
           <div class="pw-container">
             <div class="input-container" [class.error]="password.invalid && password.touched">
               <input type="password" class="textField" id="login-password" name="password" formControlName="password"
-                (focusin)="pwHolderUp = true" (focusout)="pwFocus($event.target.value)">
+                (focusin)="pwHolderUp = true" (blur)="pwFocus($event.target.value)">
               <label for="login-password" class="placeLabel" [class.up]="pwHolderUp">비밀번호</label>
             </div>
             <div

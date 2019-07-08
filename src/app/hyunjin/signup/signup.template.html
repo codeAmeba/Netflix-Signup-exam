@@ -1,0 +1,109 @@
+<nav class="navigation">
+  <a href="/" class="logoLink">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" class="logo">
+  </a>
+  <a href="/login" class="loginLink">로그인</a>
+</nav>
+<section class="signupForm">
+  <section class="freeNoticeSection">
+    <div class="freeNotice">
+      <span>첫 한 달 동안 마음껏 </span><strong>무료로 이용하세요.</strong>
+    </div>
+    <span class="stepIndicator">
+      <b>2</b>
+      /
+      <b>3단계</b>
+    </span>
+    <h1 class="stepTitle">
+      지금 가입하고 한 달 동안 무료로 <br>이용하세요.
+    </h1>
+    <div class="contextRow">Netflix 가입, 복잡하지 않아요!</div>
+    <div class="contextRow">복잡한 단계는 모두 없앴습니다.</div>
+
+  </section>
+  <h1 class="formTitle">계정을 등록하세요.</h1>
+  <form class="signUpForm" [formGroup]="userForm">
+    <div class="useridFeild">
+      <input class="userid" type="text" placeholder="이메일" formControlName="userid"
+        [class.ErrorStyle]="(userid.errors?.required || userid.errors?.pattern) && userid.touched">
+
+      <em class="inputError" *ngIf="userid.errors?.required && userid.touched">
+        이메일 주소를 입력해 주세요.
+      </em>
+      <em class="inputError" *ngIf="userid.errors?.pattern && userid.touched">
+        정확한 이메일 주소를 입력하세요.
+      </em>
+
+    </div>
+    <div class="passwordFeild">
+      <input class="password" type="password" placeholder="비밀번호" formControlName="password"
+        [class.ErrorStyle]="(password.errors?.required || password.errors?.pattern) && password.touched">
+      <em class="inputError" *ngIf="password.errors?.required && password.touched">
+        비밀번호를 입력해 주세요.
+      </em>
+      <em class="inputError" *ngIf="password.errors?.pattern && password.touched">
+        비밀번호는 4~60자 사이여야 합니다.
+      </em>
+    </div>
+    <div class="promotion">
+      <input type="checkbox">
+      <em class="promotionText">예, Netflix 특별 프로모션 알림 이메일을 보내주세요.</em>
+    </div>
+    <button class="submitButton">다음</button>
+  </form>
+</section>
+<div class="footerWrapper">
+  <div class="footer">
+    <p class="footerTop"><a class="footerTopA" href="https://help.netflix.com/contactus">질문이 있으신가요? 고객 센터에 문의하세요.</a>
+    </p>
+    <ul class="footerLinks structural">
+      <li class="footerLinkItem">
+        <a class="footerLink" href="https://help.netflix.com/support/412">
+          <span>
+            자주 묻는 질문
+          </span>
+        </a>
+      </li>
+      <li class="footerLinkItem">
+        <a class="footerLink" href="https://help.netflix.com">
+          <span>
+            고객 센터
+          </span>
+        </a>
+      </li>
+      <li class="footerLinkItem">
+        <a class="footerLink" href="https://help.netflix.com/legal/termsofuse">
+          <span>
+            이용 약관
+          </span>
+        </a>
+      </li>
+      <li class="footerLinkItem">
+        <a class="footerLink" href="https://help.netflix.com/legal/privacy">
+          <span>
+            개인정보
+          </span>
+        </a>
+      </li>
+      <li class="footerLinkItem">
+        <a class="footerLink" href="https://help.netflix.com/legal/privacy#cookies">
+          <span>
+            쿠키 설정
+          </span>
+        </a>
+      </li>
+      <li class="footerLinkItem">
+        <a class="footerLink" href="https://help.netflix.com/ko/node/2101">
+          <span>
+            회사 정보
+          </span>
+        </a>
+      </li>
+    </ul>
+    <select data-uia="languagePicker" class="nfSelect" name="__langSelect" tabindex="0">
+      <option selected="" value="/signup/regform?locale=ko-KR" label="한국어">한국어</option>
+      <option value="/signup/regform?locale=en-KR" label="English">English</option>
+    </select>
+    <p id="" class="copyText">넷플릭스서비시스코리아 유한회사 통신판매업신고번호: 제2015-서울중구-1407호</p>
+  </div>
+</div>

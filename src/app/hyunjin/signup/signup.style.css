@@ -1,0 +1,172 @@
+a{
+  text-decoration: none;
+}
+
+.navigation{
+  /* background-color: green; */
+  width: 100%;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+
+.logoLink{
+  height: 45px;
+  width: 167px;
+  vertical-align: middle;
+  line-height: 90px;
+}
+.logo{
+  height: 45px;
+  width: 167px;
+  margin-left: 2.9%;
+  display: inline-block;
+  /* background-color: yellow; */
+}
+
+.loginLink{
+  float: right;
+  color: #333;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 90px;
+  margin: 0 4%;
+  text-decoration: none;
+}
+.loginLink:hover{
+  text-decoration: underline;
+}
+.freeNotice, .stepTitle, .freeNoticeSection, .formTitle, .signUpForm, .submitButton, .promotion, .userid, .password {
+  width: 440px;
+}
+
+.signupForm{
+  /* background-color: darkcyan; */
+  margin: 20px auto;
+  width: 440px;
+}
+
+.freeNoticeSection{
+  /* background-color: chartreuse; */
+}
+
+.freeNotice{
+  background-color: #0071eb;
+  padding: 22px 0;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.freeNotice strong, b{
+  font-weight: 700;
+}
+
+.stepTitle {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 23px;
+  margin: 0 0 .6em 0;
+  /* background-color : salmon; */
+  
+}
+
+.contextRow{
+  font-size: 19px;
+  text-align: left;
+  line-height: 25px;
+}
+
+.formTitle{
+  font-size: 19px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.useridFeild, .passwordFeild{
+  margin: 10px auto;
+}
+
+.userid, .password{
+  height: 60px;
+  display: block;
+  padding: 10px;
+  box-sizing: border-box;
+  
+}
+.ErrorStyle{
+  border: 1px solid #b92d2b;
+}
+
+.inputError{
+  font-size: 13px;
+  color: #b92d2b;
+  margin: 0;
+}
+
+.promotionText{
+  margin: 8px 0;
+  font-size: 16px;
+  line-height: 1.2;
+  padding: 6px 0;
+}
+
+.submitButton{
+  border: 0;
+  outline: 0;
+  display: block;
+  background-color:  #e50914;
+  min-height: 48px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 19px;
+  color: #ffffff;
+  margin-top: 24px;
+  margin-bottom: 150px;
+}
+
+.footerWrapper{
+  width: 100%;
+  border-top: 1px solid #e6e6e6;
+  margin-top: 0;
+  background-color: #f3f3f3;
+  width: 100%;
+  padding-bottom: 20px;
+  font-size: 1em;
+  color: #a6a6a6;
+  position: relative;
+}
+.footer{
+  margin: 0 auto;
+  padding-top: 30px;
+  width: 90%;
+}
+
+.footerLink, .footerTopA{
+  font-size: 1em;
+  color: #a6a6a6;
+}
+.footerTop{
+  margin-bottom: 30px;
+}
+.footerLinks{
+  max-width: 1000px;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+.footerLinkItem{
+  box-sizing: border-box;
+  padding: 0;
+  margin-bottom: 16px;
+  display: inline-block;
+  min-width: 100px;
+  width: 25%;
+  padding-right: 12px;
+  vertical-align: top;
+}
+
+.copyText{
+  color: #737373;
+  margin: 20px 0;
+  font-size: .75em;
+  line-height: 1em;
+}

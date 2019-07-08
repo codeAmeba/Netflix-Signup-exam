@@ -21,6 +21,7 @@ import { Component } from '@angular/core';
       nav {
         position: absolute;
         top: 0;
+        z-index: 10;
       }
       a {
         margin: 0 30px;

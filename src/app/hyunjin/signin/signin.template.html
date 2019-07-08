@@ -1,0 +1,75 @@
+<div class="loginWrapper">
+  <div class="loginWrapperBackground">
+    <img class="background"
+      src="https://assets.nflxext.com/ffe/siteui/vlv3/cd4c21a2-994a-42f1-a6c4-2e0b57438223/2cb7463d-4566-4ef6-af27-9468f5db94aa/KR-ko-20190701-popsignuptwoweeks-perspective_alpha_website_small.jpg"
+      srcset="https://assets.nflxext.com/ffe/siteui/vlv3/cd4c21a2-994a-42f1-a6c4-2e0b57438223/2cb7463d-4566-4ef6-af27-9468f5db94aa/KR-ko-20190701-popsignuptwoweeks-perspective_alpha_website_small.jpg 1000w, https://assets.nflxext.com/ffe/siteui/vlv3/cd4c21a2-994a-42f1-a6c4-2e0b57438223/2cb7463d-4566-4ef6-af27-9468f5db94aa/KR-ko-20190701-popsignuptwoweeks-perspective_alpha_website_medium.jpg 1500w, https://assets.nflxext.com/ffe/siteui/vlv3/cd4c21a2-994a-42f1-a6c4-2e0b57438223/2cb7463d-4566-4ef6-af27-9468f5db94aa/KR-ko-20190701-popsignuptwoweeks-perspective_alpha_website_large.jpg 1800w"
+      alt="">
+  </div>
+  <nav class="navigation">
+    <a href="/" class="logoLink">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" class="logo">
+    </a>
+  </nav>
+  <div class="loginForm">
+    <h1 class="login">로그인</h1>
+    <form class="form" [formGroup]="userForm">
+      <div class="useridFeild">
+        <input class="userid" type="text" placeholder="이메일 주소 또는 전화번호" formControlName="userid"
+          [class.ErrorStyle]="(userid.errors?.required || userid.errors?.pattern) && userid.touched">
+        <em class="inputError" *ngIf="userid.errors?.required && userid.touched">
+          정확한 이메일 주소나 전화번호를 입력하세요.
+        </em>
+        <em class="inputError" *ngIf="userid.errors?.pattern && userid.touched">
+          정확한 이메일 주소를 입력하세요.
+        </em>
+      </div>
+      <div class="passwordFeild">
+        <input class="password" type="password" placeholder="비밀번호" formControlName="password"
+          [class.ErrorStyle]="(password.errors?.required || password.errors?.pattern) && password.touched">
+        <em class="inputError" *ngIf="(password.errors?.required || password.errors?.pattern) && password.touched">
+          비밀번호는 4~60자 사이여야 합니다.
+        </em>
+      </div>
+      <button class="loginSubmitButton">로그인</button>
+      <div class="storeInformation">
+        <input type="checkbox">
+        <em class="storeInformationText">로그인 정보 저장</em>
+      </div>
+    </form>
+
+  </div>
+  <div class="footerWrapper">
+    <div class="footer">
+      <p class="footerTop"><a class="footerTopA" href="https://help.netflix.com/contactus">질문이 있으신가요? 고객 센터에
+          문의하세요.</a>
+      </p>
+      <ul class="footerLinks structural">
+        <li class="footerLinkItem">
+          <a class="footerLink" href="/giftterms">
+            <span>
+              기프트카드 약관
+            </span>
+          </a>
+        </li>
+        <li class="footerLinkItem">
+          <a class="footerLink" href="https://help.netflix.com/legal/termsofuse">
+            <span>
+              이용 약관
+            </span>
+          </a>
+        </li>
+        <li class="footerLinkItem">
+          <a class="footerLink" href="https://help.netflix.com/legal/privacy">
+            <span>
+              개인정보 처리방침
+            </span>
+          </a>
+        </li>
+      </ul>
+      <select data-uia="languagePicker" class="nfSelect" name="__langSelect" tabindex="0">
+        <option selected="" value="/signup/regform?locale=ko-KR" label="한국어">한국어</option>
+        <option value="/signup/regform?locale=en-KR" label="English">English</option>
+      </select>
+    </div>
+  </div>
+</div>
