@@ -13,6 +13,8 @@ import { SignInComponent } from './subin/sign-in/sign-in.component';
 import { SignupFooterComponent } from './subin/signup-footer/signup-footer.component';
 import { LoginHeaderComponent } from './subin/login-header/login-header.component';
 import { LoginFooterComponent } from './subin/login-footer/login-footer.component';
+import { SignupComponent } from './hyunjin/signup/signup.component';
+import { SigninComponent } from './hyunjin/signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { LoginFooterComponent } from './subin/login-footer/login-footer.componen
     SignupFooterComponent,
     LoginHeaderComponent,
     LoginFooterComponent,
+    SignupComponent,
+    SigninComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
